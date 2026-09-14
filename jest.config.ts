@@ -9,7 +9,7 @@ const jestConfig: Config = {
     "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js",
   },
   transform: {
-    "^.+\\.(t|j)sx?$": "@swc/jest",
+    "^.+\\.(t|j)sx?$": ["@swc/jest", { jsc: { transform: { react: { runtime: "automatic" } } } }],
   },
 };
 

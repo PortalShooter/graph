@@ -15,7 +15,7 @@ import { useEffect, useRef } from "react";
  * @returns Previous value or undefined on first render
  */
 export function usePrevious<T>(value: T): T | undefined {
-  const ref = useRef<T>();
+  const ref = useRef<T>(undefined);
 
   useEffect(() => {
     ref.current = value;

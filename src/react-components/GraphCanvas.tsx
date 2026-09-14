@@ -20,7 +20,7 @@ export type GraphProps = Pick<Partial<TBlockListProps>, "renderBlock"> &
     className?: string;
     blockListClassName?: string;
     graph: Graph;
-    reactLayerRef?: React.MutableRefObject<ReactLayer | null>;
+    reactLayerRef?: React.RefObject<ReactLayer | null>;
     children?: React.ReactNode;
   };
 
@@ -33,7 +33,7 @@ export function GraphCanvas({
   children,
   ...cbs
 }: GraphProps) {
-  const containerRef = useRef<HTMLDivElement>();
+  const containerRef = useRef<HTMLDivElement>(null);
 
   const reactLayer = useLayer(graph, ReactLayer, {
     blockListClassName,

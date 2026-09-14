@@ -59,6 +59,8 @@ const MyGraph = () => {
 npm install @gravity-ui/graph
 ```
 
+Поддерживаются React 17, 18 и 19. Для разработки и тестов используется React 19.
+
 ## Примеры
 
 ### Пример на React

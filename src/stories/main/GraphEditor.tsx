@@ -10,7 +10,7 @@ import { BlockStory } from "./Block";
 
 export type TGraphComponentProps = {
   config: TGraphConfig;
-  graphRef?: React.MutableRefObject<Graph>;
+  graphRef?: React.RefObject<Graph | undefined>;
   colors?: TGraphColors;
   constants?: TGraphConstants;
   renderBlock?: <T extends TBlock>(graphObject: Graph, block: T) => React.JSX.Element;
